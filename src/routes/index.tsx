@@ -38,8 +38,8 @@ const steps = [
   { title: "Запускаю и масштабирую", desc: "Публикую, слежу за метриками и развиваю продукт после запуска." },
 ];
 
-const TELEGRAM_URL = "https://t.me/username";
-const EMAIL_URL = "mailto:hello@example.com";
+const TELEGRAM_URL = "https://t.me/test";
+const EMAIL_URL = "mailto:testbezz@gmail.com";
 
 function Index() {
   return (
