@@ -1,4 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import imgStudy from "@/assets/project-studyflow.jpg";
+import imgAnalytics from "@/assets/project-analytics.jpg";
+import imgLaunch from "@/assets/project-launchpro.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -15,9 +18,9 @@ export const Route = createFileRoute("/")({
 });
 
 const projects = [
-  { name: "StudyFlow", desc: "AI-платформа для персонализированного обучения: адаптивные планы и умный ассистент для каждого ученика.", tags: ["React", "OpenAI", "Supabase", "Tailwind"], tone: "from-lime/40" },
-  { name: "НейроАналитик", desc: "AI-сервис для анализа данных: загружаете таблицу — получаете инсайты и графики за минуты.", tags: ["TypeScript", "LLM", "Charts", "Python"], tone: "from-lime/25" },
-  { name: "LaunchPro", desc: "Конверсионный лендинг для запуска продукта — от идеи до публикации за 3 дня.", tags: ["TanStack", "Framer Motion", "SEO"], tone: "from-lime/15" },
+  { name: "StudyFlow", desc: "AI-платформа для персонализированного обучения: адаптивные планы и умный ассистент для каждого ученика.", tags: ["React", "OpenAI", "Supabase", "Tailwind"], tone: "from-lime/40", image: imgStudy },
+  { name: "НейроАналитик", desc: "AI-сервис для анализа данных: загружаете таблицу — получаете инсайты и графики за минуты.", tags: ["TypeScript", "LLM", "Charts", "Python"], tone: "from-lime/25", image: imgAnalytics },
+  { name: "LaunchPro", desc: "Конверсионный лендинг для запуска продукта — от идеи до публикации за 3 дня.", tags: ["TanStack", "Framer Motion", "SEO"], tone: "from-lime/15", image: imgLaunch },
 ];
 
 const services = [
@@ -44,7 +47,7 @@ function Index() {
         </span>
         <h1 className="font-display text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl">
           Создаю <span className="text-gradient">AI-продукты</span>
-          <br /> через вайбкодинг<span className="text-lime">.</span>
+          <br /> через вайбкодинг
         </h1>
         <p className="mt-8 max-w-xl text-base text-muted-foreground sm:text-lg">
           Помогаю запускать цифровые продукты в разы быстрее: от идеи до работающего MVP с ИИ внутри — за дни, а не месяцы.
@@ -68,16 +71,7 @@ function Index() {
           {projects.map((p, i) => (
             <article key={p.name} className="group overflow-hidden rounded-2xl border border-border bg-card/70 backdrop-blur transition-colors hover:border-lime/60">
               <div className={`relative aspect-[16/10] bg-gradient-to-br ${p.tone} to-surface`}>
-                <div className="absolute inset-4 rounded-lg border border-border bg-background/60 p-3">
-                  <div className="flex gap-1.5">
-                    <span className="h-2 w-2 rounded-full bg-muted-foreground/40" />
-                    <span className="h-2 w-2 rounded-full bg-muted-foreground/40" />
-                    <span className="h-2 w-2 rounded-full bg-lime" />
-                  </div>
-                  <div className="mt-4 h-2 w-2/3 rounded bg-foreground/20" />
-                  <div className="mt-2 h-2 w-1/2 rounded bg-foreground/10" />
-                  <div className="mt-4 h-8 w-1/3 rounded bg-gradient-accent opacity-80" />
-                </div>
+                <img src={p.image} alt={`Проект ${p.name}`} loading="lazy" width={1280} height={800} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <span className="absolute bottom-3 right-4 font-mono text-xs text-lime">0{i + 1}</span>
               </div>
               <div className="p-6">
