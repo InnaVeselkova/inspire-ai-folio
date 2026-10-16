@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Mail, Send } from "lucide-react";
 import imgStudy from "@/assets/project-studyflow.jpg";
 import imgAnalytics from "@/assets/project-analytics.jpg";
 import imgLaunch from "@/assets/project-launchpro.jpg";
@@ -129,9 +130,6 @@ function Index() {
       <section id="contact" className="mx-auto max-w-6xl px-5 pb-28 pt-10">
         <div className="relative overflow-hidden rounded-3xl border border-lime/25 bg-card/70 px-6 py-16 text-center backdrop-blur sm:px-12">
           <div className="pointer-events-none absolute -top-28 left-1/2 h-56 w-[40rem] max-w-full -translate-x-1/2 rounded-full bg-lime/10 blur-3xl" />
-          <span className="relative mb-6 inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 font-mono text-xs text-muted-foreground">
-            <span className="h-2 w-2 rounded-full bg-lime shadow-glow /> Открыта для новых проектов
-          </span>
           <h2 className="relative font-display text-4xl font-extrabold leading-none tracking-tight sm:text-6xl">
             Готовы<br />начать <span className="text-gradient">проект?</span>
           </h2>
