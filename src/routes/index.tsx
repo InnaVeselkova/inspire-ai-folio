@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Mail, Send } from "lucide-react";
 import imgStudy from "@/assets/project-studyflow.jpg";
 import imgAnalytics from "@/assets/project-analytics.jpg";
 import imgLaunch from "@/assets/project-launchpro.jpg";
@@ -36,6 +37,9 @@ const steps = [
   { title: "Тестирую и улучшаю", desc: "Проверяю сценарии, собираю обратную связь и дорабатываю детали." },
   { title: "Запускаю и масштабирую", desc: "Публикую, слежу за метриками и развиваю продукт после запуска." },
 ];
+
+const TELEGRAM_URL = "https://t.me/username";
+const EMAIL_URL = "mailto:hello@example.com";
 
 function Index() {
   return (
@@ -121,7 +125,27 @@ function Index() {
           ))}
         </ol>
       </section>
-      <div id="contact" />
+
+      {/* CTA */}
+      <section id="contact" className="mx-auto max-w-6xl px-5 pb-28 pt-10">
+        <div className="relative overflow-hidden rounded-3xl border border-lime/25 bg-card/70 px-6 py-16 text-center backdrop-blur sm:px-12">
+          <div className="pointer-events-none absolute -top-28 left-1/2 h-56 w-[40rem] max-w-full -translate-x-1/2 rounded-full bg-lime/10 blur-3xl" />
+          <h2 className="relative font-display text-4xl font-extrabold leading-none tracking-tight sm:text-6xl">
+            Готовы<br />начать <span className="text-gradient">проект?</span>
+          </h2>
+          <p className="relative mx-auto mt-6 max-w-md text-base text-muted-foreground sm:text-lg">
+            Напишите мне, и мы обсудим вашу задачу
+          </p>
+          <div className="relative mt-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:justify-center">
+            <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-accent px-8 py-4 text-sm font-bold uppercase tracking-wide text-primary-foreground shadow-glow transition-transform hover:scale-105">
+              <Send className="h-4 w-4" /> Написать в Telegram
+            </a>
+            <a href={EMAIL_URL} className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-8 py-4 text-sm font-bold uppercase tracking-wide transition-colors hover:border-lime hover:text-lime">
+              <Mail className="h-4 w-4" /> Написать на Email
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
