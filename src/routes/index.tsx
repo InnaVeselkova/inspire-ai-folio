@@ -56,11 +56,11 @@ function Index() {
         <p className="mt-8 max-w-xl text-base text-muted-foreground sm:text-lg">
           Помогаю запускать цифровые продукты в разы быстрее: от идеи до работающего MVP с ИИ внутри — за дни, а не месяцы.
         </p>
-        <div className="mt-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-          <a href="#projects" className="rounded-full bg-gradient-accent px-8 py-4 text-sm font-bold uppercase tracking-wide text-primary-foreground shadow-glow transition-transform hover:scale-105">
+        <div className="mt-10 flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:gap-3">
+          <a href="#projects" className="rounded-full bg-gradient-accent px-8 py-5 text-base font-bold uppercase tracking-wide text-primary-foreground shadow-glow transition-transform hover:scale-105 sm:px-8 sm:py-4 sm:text-sm">
             Посмотреть проекты
           </a>
-          <a href="#contact" className="rounded-full border border-border px-8 py-4 text-sm font-bold uppercase tracking-wide transition-colors hover:border-lime hover:text-lime">
+          <a href="#contact" className="rounded-full border border-border px-8 py-5 text-base font-bold uppercase tracking-wide transition-colors hover:border-lime hover:text-lime sm:px-8 sm:py-4 sm:text-sm">
             Связаться
           </a>
         </div>
@@ -71,7 +71,7 @@ function Index() {
         <h2 className="font-display text-4xl font-extrabold leading-none tracking-tight sm:text-6xl">
           Избранные<br />проекты
         </h2>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-12 md:grid-cols-3 md:gap-6">
           {projects.map((p, i) => (
             <article key={p.name} className="group overflow-hidden rounded-2xl border border-border bg-card/70 backdrop-blur transition-colors hover:border-lime/60">
               <div className={`relative aspect-[16/10] bg-gradient-to-br ${p.tone} to-surface`}>
@@ -136,12 +136,12 @@ function Index() {
           <p className="relative mx-auto mt-6 max-w-md text-base text-muted-foreground sm:text-lg">
             Напишите мне, и мы обсудим вашу задачу
           </p>
-          <div className="relative mt-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:justify-center">
-            <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-accent px-8 py-4 text-sm font-bold uppercase tracking-wide text-primary-foreground shadow-glow transition-transform hover:scale-105">
-              <Send className="h-4 w-4" /> Написать в Telegram
+          <div className="relative mt-10 flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:justify-center sm:gap-3">
+            <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-accent px-8 py-5 text-base font-bold uppercase tracking-wide text-primary-foreground shadow-glow transition-transform hover:scale-105 sm:px-8 sm:py-4 sm:text-sm">
+              <Send className="h-5 w-5 sm:h-4 sm:w-4" /> Написать в Telegram
             </a>
-            <a href={EMAIL_URL} className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-8 py-4 text-sm font-bold uppercase tracking-wide transition-colors hover:border-lime hover:text-lime">
-              <Mail className="h-4 w-4" /> Написать на Email
+            <a href={EMAIL_URL} className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-8 py-5 text-base font-bold uppercase tracking-wide transition-colors hover:border-lime hover:text-lime sm:px-8 sm:py-4 sm:text-sm">
+              <Mail className="h-5 w-5 sm:h-4 sm:w-4" /> Написать на Email
             </a>
           </div>
         </div>
